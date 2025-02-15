@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/6207d9d7a0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>My ePortfolio</title>
+</head>
+<body>
+    <div class="background"></div>
+        <!-- HEADER -->
+<!------Desktop navigation------->
+    <header class="desktop-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+    <!------Mobile navigation------->
+    <header class="mobile-header">
+        <div class="menu">
+        <div class="icon" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="mobile-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+
+        <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="content">
+            <div class="column">
+                <!-- <img src="../img/logo.png"> -->
+                <p>Pixel Perfection is a dynamic web design agency dedicated to creating visually stunning and user-friendly websites for clients across various industries. Our team of talented designers is passionate about pushing the boundaries of creativity and delivering exceptional results.</p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Victoria, Melbourne, Australia</p>
+                <p class="email">andrewpham2005.work@gmail.com</p>
+                <h4>+61-0123456789</h4>
+            </div>
+            <div class="link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                </ul>
+            </div>
+                
+                <div class="media">
+                    <h3>Social contact</h3>
+                    <a href="#"><i class="fa-brands fa-facebook"> </i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"> </i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
+                </div>
+                <hr>
+            <p class="copyright">    
+                Copyright by NguyenVuPham - All Rights Reserved
+            </p>
+            </div>
+    </footer>
+
+    <!-- DESKTOP HOME CONTENT -->
+    <section class="desktop-home-content">
+        <div class="desktop-background">
+            <img src="../img/new_background.png" alt="Background Image">
+        </div>
+        <div class="title-text">
+            <h2>My name is Andrew</h2>
+            <h1>I'm a <br> <span class="desktop-auto-type"></span></h1>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+                let typed = new Typed(".desktop-auto-type", {
+                    strings: ["Software Engineer", "Developer", "Designer"],
+                    typeSpeed: 140,
+                    backSpeed: 150,
+                    loop: true
+                });
+            </script>
+            <!-- Typo effect in html,css , js: https://www.youtube.com/watch?v=nxoHR9lltK0&pp=ygUUdHlwbyB0ZXh0IGphdmFzY3JpcHQ%3D -->
+            <div class="box">
+                <a href="#">Hire Me!!</a>
+                <a href="about.html">About me...</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- MOBILE HOME CONTENT -->
+    <section class="mobile-home-content">
+        <div class="mobile-background">
+            <img src="../img/phone_background.png" width="600" height="700" alt="Background Image">
+        </div>
+        <div class="title-text">
+            <h2>My name is Andrew</h2>
+            <h1>I'm a <br> <span class="mobile-auto-type"></span></h1>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+                let Mobiletyped = new Typed(".mobile-auto-type", {
+                    strings: ["Software\nEngineer", "Developer", "Designer"],
+                    typeSpeed: 140,
+                    backSpeed: 150,
+                    loop: true
+                });
+            </script>
+            <div class="box">
+                <a href="#">Hire Me!!</a>
+                <a href="about.html">About me...</a>
+            </div>
+        </div>
+    </section>
+        <!--=============== TOGGLE DARKMODE ===============-->
+        <script>
+    const darkModeSwitch = document.getElementById('darkmode');
+    const background = document.querySelector('.background');
+    const subtitle = document.querySelector('.desktop-home-content .title-text');
+    const title1 = document.querySelector('.desktop-home-content .title-text h1 span');
+    const title2 = document.querySelector('.desktop-home-content .title-text h1 ');
+    const naviLinks = document.querySelectorAll('.desktop-header nav ul li a');
+    const subtitleMobile = document.querySelector('.mobile-home-content .title-text');
+    const title1Mobile = document.querySelector('.mobile-home-content .title-text h1 span');
+    const title2Mobile = document.querySelector('.mobile-home-content .title-text h1 ');
+    const title3 = document.querySelector('.about-content .myself h1');
+    
+    darkModeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            background.style.backgroundColor = "#5b564c";
+            naviLinks.forEach(link => {
+                link.style.color = "#FFE09E";
+            });
+            subtitleMobile.style.color = "#FFE09E";
+            title1Mobile.style.color = "#FFE09E";
+            title2Mobile.style.color = "#FFE09E";
+            
+            
+            subtitle.style.color = "#FFE09E";
+            title1.style.color = "#FFE09E";
+            title2.style.color = "#FFE09E";
+        } else {
+            background.style.backgroundColor = "#FFE09E";
+            naviLinks.forEach(link => {
+                link.style.color = "#333333";
+            });
+            subtitleMobile.style.color = "#654321";
+            title1Mobile.style.color = "#654321";
+            title2Mobile.style.color = "#654321";
+
+            subtitle.style.color = "#654321";
+            title1.style.color = "#654321";
+            title2.style.color = "#654321";
+        } 
+    });
+        </script>
+        <!-- Light/Dark Theme Toggle using HTML CSS & JavaScript https://www.youtube.com/watch?v=CUEJkJ9HDbY -->
+        <!--=============== TOGGLE MENU ===============-->
+        <script>
+            function toggleNav() {
+                const container = document.querySelector(".mobile-container");
+                const icon = document.querySelector(".icon")
+                container.classList.toggle('expand')
+                icon.classList.toggle('expand')
+            }
+        </script>
+        <!--=============== JS FUNCTIONS ===============-->
+        <script src="/assets/js/index.js"></script>
+    </body>
+</html>

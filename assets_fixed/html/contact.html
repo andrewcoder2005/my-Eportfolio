@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/6207d9d7a0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact page</title>
+</head>
+<body>
+    <div class="background"></div>
+        <!-- HEADER -->
+<!------Desktop navigation------->
+    <header class="desktop-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+    <!------Mobile navigation------->
+    <header class="mobile-header">
+        <div class="menu">
+        <div class="icon" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="mobile-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+
+        <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="content">
+            <div class="column">
+                <!-- <img src="../img/logo.png"> -->
+                <p>Pixel Perfection is a dynamic web design agency dedicated to creating visually stunning and user-friendly websites for clients across various industries. Our team of talented designers is passionate about pushing the boundaries of creativity and delivering exceptional results.</p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Victoria, Melbourne, Australia</p>
+                <p class="email">andrewpham2005.work@gmail.com</p>
+                <h4>+61-0123456789</h4>
+            </div>
+            <div class="link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                </ul>
+            </div>
+                
+                <div class="media">
+                    <h3>Social contact</h3>
+                    <a href="#"><i class="fa-brands fa-facebook"> </i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"> </i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
+                </div>
+                <hr>
+            <p class="copyright">    
+                Copyright by NguyenVuPham - All Rights Reserved
+            </p>
+            </div>
+    </footer>
+        <!--=============== CONTACT PAGE CONTENT ===============-->
+    
+<section class = "contact-content">
+    <div class="content">
+        <h2>Contact me</h2>
+        <p>Welcome to the Contact Me page! This is your direct line to get in touch with me. Whether you have inquiries, suggestions, or just want to say hello, I'm here to listen. Don't hesitate to reach out; I'm looking forward to hearing from you!</p>
+    </div>
+    <div class="container">
+    <div class="contactInfo">
+        <div class="box">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="text">
+                <h3>Address</h3>
+                <p>Victoria, Melbourne, Australia</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="text">
+                <h3>Phone</h3>
+                <p>+61-0123456789</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="text">
+                <h3>Email</h3>
+                <p>andrewpham2005.work@gmail.com</p>
+            </div>
+        </div>
+    </div>
+        <div class="contactForm">
+            <form>
+                <h2>Send Message</h2>
+                <div class="inputbox">
+                    <input type="text" name="name" required="required">
+                    <span>Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="email" name="email" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputbox">
+                    <input type="tel " name="phone" required="required">
+                    <span>Contact Number</span>
+                </div>
+                <div class="inputbox">
+                    <textarea name="message" required="required"></textarea>
+                    <span>Your Message Here</span>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+        <!--=============== TOGGLE DARKMODE ===============-->
+        <script>
+const darkModeSwitch = document.getElementById('darkmode');
+const background = document.querySelector('.background');
+const naviLinks = document.querySelectorAll('.desktop-header nav ul li a');
+const title = document.querySelector('.contact-content .content h2');
+const subtitle = document.querySelector('.contact-content .content p');
+
+darkModeSwitch.addEventListener('change', function() {
+    const contactContent = document.querySelector('.contact-content');
+    const textElements = document.querySelectorAll('.contact-content .contactInfo .text h3, .contact-content .contactInfo .text p');
+
+    if (this.checked) {
+        background.style.backgroundColor = "#5b564c";
+        naviLinks.forEach(link => {
+            link.style.color = "#FFE09E";
+        });
+        title.style.color = "#FFE09E";
+        subtitle.style.color = "#FFE09E";
+        textElements.forEach(element => { 
+            element.style.color = "#FFE09E";
+        });
+
+    } else {
+        background.style.backgroundColor = "#FFE09E";
+        naviLinks.forEach(link => {
+            link.style.color = "#333333";
+        });
+        title.style.color = "#654321";
+        subtitle.style.color = "#654321";
+        textElements.forEach(element => { 
+            element.style.color = "#654321";
+        });
+    } 
+});
+
+        </script>
+        
+        <!--=============== TOGGLE MENU ===============-->
+        <script>
+            function toggleNav() {
+                const container = document.querySelector(".mobile-container");
+                const icon = document.querySelector(".icon")
+                container.classList.toggle('expand')
+                icon.classList.toggle('expand')
+            }
+        </script>
+        <!--=============== SCROLL REVEAL ===============-->
+        <script>        
+            document.addEventListener('DOMContentLoaded', function() {
+                reveal(); // Call the reveal function when the DOM content is loaded
+    
+                window.addEventListener('scroll', reveal);
+    
+                function reveal() {
+                    const reveals = document.querySelectorAll('.contact-content');
+                    const windowHeight = window.innerHeight;
+                    const revealPoint = 50;
+    
+                    reveals.forEach(reveal => {
+                        const revealTop = reveal.getBoundingClientRect().top;
+    
+                        if (revealTop < windowHeight - revealPoint) {
+                            reveal.classList.add('active');
+                            reveal.classList.remove('remove');
+                        } else {
+                            reveal.classList.add('remove');
+                            reveal.classList.remove('active');
+                        }
+                    });
+                }
+            });
+            </script>
+</body>

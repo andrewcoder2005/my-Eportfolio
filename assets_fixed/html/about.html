@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/6207d9d7a0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>About page</title>
+</head>
+<body>
+    <div class="background"></div>
+        <!-- HEADER -->
+<!------Desktop navigation------->
+    <header class="desktop-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+    <!------Mobile navigation------->
+    <header class="mobile-header">
+        <div class="menu">
+        <div class="icon" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="mobile-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+
+        <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="content">
+            <div class="column">
+                <!-- <img src="../img/logo.png"> -->
+                <p>Pixel Perfection is a dynamic web design agency dedicated to creating visually stunning and user-friendly websites for clients across various industries. Our team of talented designers is passionate about pushing the boundaries of creativity and delivering exceptional results.</p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Victoria, Melbourne, Australia</p>
+                <p class="email">andrewpham2005.work@gmail.com</p>
+                <h4>+61-0123456789</h4>
+            </div>
+            <div class="link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                </ul>
+            </div>
+                
+                <div class="media">
+                    <h3>Social contact</h3>
+                    <a href="#"><i class="fa-brands fa-facebook"> </i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"> </i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
+                </div>
+                <hr>
+            <p class="copyright">    
+                Copyright by NguyenVuPham - All Rights Reserved
+            </p>
+            </div>
+    </footer>
+    
+<section class = "about-content reveal">
+    <div class="myself">
+        <h1>About me</h1>
+        <p>Hey, I'm Nguyen Vu (Andrew), a 19-year-old from Vietnam
+        studying at <a href="https://federation.edu.au/">Federation University.</a> My dream? To be a software engineer. I'm passionate about coding, tech.
+        <br>Let's create something amazing together!</p>
+    </div>
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id ="slide-1" src="../img/slide1.jpg">
+            <img id ='slide-2' src="../img/slide2.jpg">
+            <img id ='slide-3' src="../img/slide3.jpg">
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+        </div>
+    </div>
+    <div class="inspirations">
+        <h1>My Ambitions</h1>
+        <p>Aspiring to follow in the footsteps of tech visionaries.<br>
+        My ambition is to become a renowned software engineer.
+        Inspired by the innovative work of pioneers : 
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id ="slide-3" src="../img/elon.jpg">
+                <h2>Elon musk</h2>
+                <img id ='slide-4' src="../img/steve.avif">
+                <img id ='slide-5' src="../img/mark.jpg">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+            </div>
+        </div>
+        <h4>Know more about my <a href="ambition.html">Ambitions</a> </h4>
+    </div>
+    </section>
+        <!--=============== TOGGLE DARKMODE ===============-->
+        <script>
+const darkModeSwitch = document.getElementById('darkmode');
+const background = document.querySelector('.background');
+const naviLinks = document.querySelectorAll('.desktop-header nav ul li a');
+const title3 = document.querySelector('.about-content .myself h1');
+const subtitle3 = document.querySelector('.about-content .myself p ');
+const title4 = document.querySelector('.about-content .inspirations h1');
+const text = document.querySelector('.about-content .myself p a');
+const subtext1 = document.querySelector('.about-content .inspirations p');
+const subtext = document.querySelector('.about-content .inspirations h4 a ');
+const subtext2 = document.querySelector('.about-content .inspirations h4 ');
+
+darkModeSwitch.addEventListener('change', function() {
+    if (this.checked) {
+        background.style.backgroundColor = "#5b564c";
+        naviLinks.forEach(link => {
+            link.style.color = "#FFE09E";
+        });
+        title3.style.color = "#FFE09E";
+        subtitle3.style.color = "#FFE09E";
+        title4.style.color = "#FFE09E";
+        text.style.color = "#FFE09E";
+        subtext1.style.color = "#FFE09E";
+        subtext.style.color = "#FFE09E";
+        subtext2.style.color = "#FFE09E";
+    } else {
+        background.style.backgroundColor = "#FFE09E";
+        naviLinks.forEach(link => {
+            link.style.color = "#333333";
+        });
+        title3.style.color = "#654321";
+        subtitle3.style.color = "#000";
+        title4.style.color = "#654321";
+        text.style.color = "#654321";
+        subtext1.style.color = "#000";
+        subtext.style.color = "#654321";
+        subtext2.style.color = "#000";
+    } 
+});
+        </script>
+        
+        <!--=============== TOGGLE MENU ===============-->
+        <script>
+            function toggleNav() {
+                const container = document.querySelector(".mobile-container");
+                const icon = document.querySelector(".icon")
+                container.classList.toggle('expand')
+                icon.classList.toggle('expand')
+            }
+        </script>
+        
+        <!-- ======Reveal pages effect ========== -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            reveal(); // Call the reveal function when the DOM content is loaded
+
+            window.addEventListener('scroll', reveal);
+
+            function reveal() {
+                const reveals = document.querySelectorAll('.about-content');
+                const windowHeight = window.innerHeight;
+                const revealPoint = 50;
+
+                reveals.forEach(reveal => {
+                    const revealTop = reveal.getBoundingClientRect().top;
+
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveal.classList.add('active');
+                        reveal.classList.remove('remove');
+                    } else {
+                        reveal.classList.add('remove');
+                        reveal.classList.remove('active');
+                    }
+                });
+            }
+        });
+        </script>
+        <!-- Reveal pages effect: https://www.youtube.com/watch?v=T33NN_pPeNI -->
+</body>
+

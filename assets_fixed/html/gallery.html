@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/6207d9d7a0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Gallery page </title>
+</head>
+<body>
+    <div class="background"></div>
+        <!-- HEADER -->
+<!------Desktop navigation------->
+    <header class="desktop-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+    <!------Mobile navigation------->
+    <header class="mobile-header">
+        <div class="menu">
+        <div class="icon" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="mobile-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="internship.html">Internships</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode"></label>
+    </header>
+
+        <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="content">
+            <div class="column">
+                <!-- <img src="../img/logo.png"> -->
+                <p>Pixel Perfection is a dynamic web design agency dedicated to creating visually stunning and user-friendly websites for clients across various industries. Our team of talented designers is passionate about pushing the boundaries of creativity and delivering exceptional results.</p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Victoria, Melbourne, Australia</p>
+                <p class="email">andrewpham2005.work@gmail.com</p>
+                <h4>+61-0123456789</h4>
+            </div>
+            <div class="link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                </ul>
+            </div>
+                
+                <div class="media">
+                    <h3>Social contact</h3>
+                    <a href="#"><i class="fa-brands fa-facebook"> </i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"> </i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"> </i></a>
+                </div>
+                <hr>
+            <p class="copyright">    
+                Copyright by NguyenVuPham - All Rights Reserved
+            </p>
+            </div>
+    </footer>
+<section class = "gallery-content">
+    <div class="myself">
+        <h1>Project Showcase</h1>
+        <p>
+The Project Showcase on the Gallery page offers a glimpse into the diverse array of projects I undertook during my internship at <a href="#">Pixel Perfection</a>.<br> Explore this section to witness the real-world applications of my skills and creativity, each project telling a unique story of innovation, problem-solving, and professional growth</p>
+    </div>
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id ="slide-1" src="../img/todo.gif" alt="todolist">
+            <img id ='slide-2' src="../img/order.gif">
+            <img id ='slide-3' src="../img/weather.gif">
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+        </div>
+    </div>
+    <div class="inspirations">
+        <h1>Team Moments</h1>
+        <p>Showcasing memorable snapshots capturing the camaraderie and collaborative spirit shared with my colleagues during my internship at <a href="#">Pixel Perfection</a>.<br>Each photo is a testament to the teamwork, camaraderie, and shared experiences that made my internship journey truly special.
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id ="slide-3" src="../img/work1.avif">
+                <img id ='slide-4' src="../img/work2.jpg">
+                <img id ='slide-5' src="../img/workê.png">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+            </div>
+        </div>
+        <h4>Know more via my <a href="internship.html">Internship page</a> </h4>
+    </div>
+    </section>
+        <!--=============== TOGGLE DARKMODE ===============-->
+        <script>
+const darkModeSwitch = document.getElementById('darkmode');
+const background = document.querySelector('.background');
+const naviLinks = document.querySelectorAll('.desktop-header nav ul li a');
+const title1 = document.querySelector('.gallery-content .myself h1');
+const subtext1 = document.querySelector('.gallery-content .myself p ');
+const title2 = document.querySelector('.gallery-content .inspirations h1');
+const text = document.querySelector('.gallery-content .myself p a');
+const subtext2 = document.querySelector('.gallery-content .inspirations p');
+const subtext3 = document.querySelector('.gallery-content .inspirations p a');
+const subtext5 = document.querySelector('.gallery-content .inspirations h4 a ');
+const subtext4 = document.querySelector('.gallery-content .inspirations h4 ');
+
+darkModeSwitch.addEventListener('change', function() {
+    if (this.checked) {
+        background.style.backgroundColor = "#5b564c";
+        naviLinks.forEach(link => {
+            link.style.color = "#FFE09E";
+        });
+        title1.style.color = "#FFE09E";
+        subtext1.style.color = "#FFE09E";
+        title2.style.color = "#FFE09E";
+        text.style.color = "#FFE09E";
+        subtext2.style.color = "#FFE09E";
+        subtext5.style.color = "#FFE09E";
+        subtext3.style.color = "#FFE09E";
+        subtext4.style.color = "#FFE09E";
+    } else {
+        background.style.backgroundColor = "#FFE09E";
+        naviLinks.forEach(link => {
+            link.style.color = "#333333";
+        });
+        title1.style.color = "#654321";
+        subtext1.style.color = "#000";
+        title2.style.color = "#654321";
+        text.style.color = "#654321";
+        subtext3.style.color = "#000";
+        subtext5.style.color = "#654321";
+        subtext4.style.color = "#654321";
+        subtext2.style.color = "#000";
+    } 
+});
+        </script>
+        
+        <!--=============== TOGGLE MENU ===============-->
+        <script>
+            function toggleNav() {
+                const container = document.querySelector(".mobile-container");
+                const icon = document.querySelector(".icon")
+                container.classList.toggle('expand')
+                icon.classList.toggle('expand')
+            }
+        </script>
+
+                <!--=============== SCROLL REVEAL ===============-->
+        <script>        
+        document.addEventListener('DOMContentLoaded', function() {
+            reveal(); // Call the reveal function when the DOM content is loaded
+
+            window.addEventListener('scroll', reveal);
+
+            function reveal() {
+                const reveals = document.querySelectorAll('.gallery-content');
+                const windowHeight = window.innerHeight;
+                const revealPoint = 50;
+
+                reveals.forEach(reveal => {
+                    const revealTop = reveal.getBoundingClientRect().top;
+
+                    if (revealTop < windowHeight - revealPoint) {
+                        reveal.classList.add('active');
+                        reveal.classList.remove('remove');
+                    } else {
+                        reveal.classList.add('remove');
+                        reveal.classList.remove('active');
+                    }
+                });
+            }
+        });
+        </script>
+
+</body>
